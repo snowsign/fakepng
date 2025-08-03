@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Inter';
+    font-weight: bold;
+    src: local('Inter Bold'), url('Inter_24pt-Bold.ttf');
+}
+
+body {
+    margin: 0;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+#main-container.droppable::before {
+    content: '';
+    position: absolute;
+    inset: 0.75em;
+    border: 4px dashed #b100b1;
+    border-radius: 2em;
+}
+
+#title {
+    font-family: 'Inter', sans-serif;
+    font-size: 5vw;
+    text-align: center;
+}
+
+#upload {
+    all: unset;
+    box-sizing: border-box;
+    background-color: #b100b1;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+    width: 30vw;
+    aspect-ratio: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 3vw;
+    gap: 0.25em;
+    cursor: pointer;
+}
+
+#upload:hover {
+    background-color: #a000a0;
+}
+
+#upload.droppable {
+    background-color: #09b300;
+}
+
+#upload-icon {
+    display: inline;
+    width: 1.5em;
+}
+
+#file-picker {
+    display: none;
+}
