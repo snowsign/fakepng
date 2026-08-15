@@ -16,11 +16,9 @@ body {
     height: 100dvh;
 }
 
-#main-container.droppable::before {
-    content: '';
-    position: absolute;
-    inset: 0.75em;
-    border: 4px dashed #b100b1;
+#main-container.droppable {
+    outline-offset: -1em;
+    outline: 4px dashed #b100b1;
     border-radius: 2em;
 }
 
